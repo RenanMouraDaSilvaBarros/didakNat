@@ -1,5 +1,7 @@
 import 'package:didak_nat/models/dataModel.dart';
 import 'package:didak_nat/modules/specific_content/models/specific_contents_model.dart';
+import 'package:didak_nat/modules/specific_content/models/specific_contents_model.dart';
+import 'package:flutter/material.dart';
 import '../modules/general_content/image_path/imagePath.dart';
 import '../modules/home/image_path/imagePath.dart';
 
@@ -7,32 +9,14 @@ class DataSimulador {
 //BIOLOGIA
 
 //CONTEÚDOS GERAIS
-  static List<DataModel> biology = [
-    DataModel(description: "Origem da via", image: MOLECULE_ORIGIN_IMG),
-    DataModel(description: "Evolução", image: EVOLUTION_DARWIN_IMG),
-    DataModel(
-        description: "Bioquímica", image: ORGANIC_MOLECULE_BIOCHEMISTRY_IMG),
-    DataModel(description: "Citologia", image: MICROSCOPE_CYTOLOGY_IMG),
-    DataModel(description: "Metabolismo energético", image: BIOLOGY_IMG),
-    DataModel(description: "Ecologia", image: PLANETATHER_ECOLOGY_IMG),
-    DataModel(description: "Histologia", image: HISTOLOGY_FABRIC_CILIOS_IMG),
-    DataModel(description: "Fisiologia humana", image: ESTOMAGO_PHYSIOLOGY_IMG),
-    DataModel(description: "Genética", image: DNA_GENETIC_IMG),
-    DataModel(
-        description: "Classificação dos seres vivos",
-        image: TREE_PHILOGENETIC_CLASSIFICATION_IMG),
-    DataModel(description: "Microbiologia", image: BACTERIA_MICROBIOLOGY_IMG),
-    DataModel(description: "Botânica", image: BOTONICA_SHEET_IMG),
-    DataModel(description: "Zoologia", image: SPIDER_ZOOLOGY_IMG),
-  ];
 
-  static List originOfLifeSpecificContents = [
+  static List<SpecificContentsModel> originOfLifeSpecificContents = [
     SpecificContentsModel(description: "Abiogênese x Biogênese"),
     SpecificContentsModel(description: "Hipóteses sobre a origem da vida"),
     SpecificContentsModel(description: "Evolução do metabolismo energético"),
   ];
 
-  static List evolutionSpecificContents = [
+  static List<SpecificContentsModel> evolutionSpecificContents = [
     SpecificContentsModel(
       description: "Lamarckismo",
     ),
@@ -47,7 +31,7 @@ class DataSimulador {
     ),
   ];
 
-  static List biochemistrySpecificContents = [
+  static List<SpecificContentsModel> biochemistrySpecificContents = [
     SpecificContentsModel(
       description: "Composição dos seres vivos",
     ),
@@ -77,7 +61,7 @@ class DataSimulador {
     ),
   ];
 
-  static List cytologySpecificContents = [
+  static List<SpecificContentsModel> cytologySpecificContents = [
     SpecificContentsModel(
       description: "Introdução à citologia",
     ),
@@ -98,7 +82,7 @@ class DataSimulador {
     ),
   ];
 
-  static List energyMetabolismSpecificContents = [
+  static List<SpecificContentsModel> energyMetabolismSpecificContents = [
     SpecificContentsModel(
       description: "Fermentação",
     ),
@@ -110,7 +94,7 @@ class DataSimulador {
     ),
   ];
 
-  static List ecologySpecificContents = [
+  static List<SpecificContentsModel> ecologySpecificContents = [
     SpecificContentsModel(
       description: "Conceitos básicos de Ecologia",
     ),
@@ -149,7 +133,7 @@ class DataSimulador {
     ),
   ];
 
-  static List histologySpecificContents = [
+  static List<SpecificContentsModel> histologySpecificContents = [
     SpecificContentsModel(
       description: "Introdução a histologia",
     ),
@@ -167,7 +151,7 @@ class DataSimulador {
     ),
   ];
 
-  static List humanPhysiologySpecificContents = [
+  static List<SpecificContentsModel> humanPhysiologySpecificContents = [
     SpecificContentsModel(
       description: "Reprodução",
     ),
@@ -189,7 +173,7 @@ class DataSimulador {
     SpecificContentsModel(description: "Sentidos"),
   ];
 
-  static List geneticsSpecificContents = [
+  static List<SpecificContentsModel> geneticsSpecificContents = [
     SpecificContentsModel(
       description: "Primeira Lei de Mendel",
     ),
@@ -219,7 +203,7 @@ class DataSimulador {
     ),
   ];
 
-  static List classificationOfLivingBeingsSpecificContents = [
+  static List<SpecificContentsModel> classificationOfLivingBeingsSpecificContents = [
     SpecificContentsModel(
       description: "Classificação de Lineu",
     ),
@@ -229,7 +213,7 @@ class DataSimulador {
     SpecificContentsModel(description: "Filogenia"),
   ];
 
-  static List microbiologySpecificContents = [
+  static List<SpecificContentsModel> microbiologySpecificContents = [
     SpecificContentsModel(
       description: "Vírus",
     ),
@@ -245,7 +229,7 @@ class DataSimulador {
     SpecificContentsModel(description: "Fungos"),
   ];
 
-  static List botanySpecificContents = [
+  static List<SpecificContentsModel> botanySpecificContents = [
     SpecificContentsModel(
       description: "Classificação das plantas",
     ),
@@ -261,7 +245,7 @@ class DataSimulador {
     SpecificContentsModel(description: "Reprodução assexuada das plantas")
   ];
 
-  static List zoologySpecificContents = [
+  static List<SpecificContentsModel> zoologySpecificContents = [
     SpecificContentsModel(
       description: "Características gerais dos animais",
     ),
@@ -340,5 +324,61 @@ class DataSimulador {
     "Eletromagnetismo",
     "Física quântica",
     "Relatividade"
+  ];
+
+  static List<DataModel> biology = [
+    DataModel(
+        description: "Origem da via",
+        image: MOLECULE_ORIGIN_IMG,
+        color: Colors.green,
+        specificContentsModel: originOfLifeSpecificContents),
+    DataModel(
+        description: "Evolução",
+        image: EVOLUTION_DARWIN_IMG,
+        specificContentsModel: evolutionSpecificContents),
+    DataModel(
+        description: "Bioquímica",
+        image: ORGANIC_MOLECULE_BIOCHEMISTRY_IMG,
+        specificContentsModel: biochemistrySpecificContents),
+    DataModel(
+        description: "Citologia",
+        image: MICROSCOPE_CYTOLOGY_IMG,
+        specificContentsModel: cytologySpecificContents),
+    DataModel(
+        description: "Metabolismo energético",
+        image: BIOLOGY_IMG,
+        specificContentsModel: energyMetabolismSpecificContents),
+    DataModel(
+        description: "Ecologia",
+        image: PLANETATHER_ECOLOGY_IMG,
+        specificContentsModel: ecologySpecificContents),
+    DataModel(
+        description: "Histologia",
+        image: HISTOLOGY_FABRIC_CILIOS_IMG,
+        specificContentsModel: histologySpecificContents),
+    DataModel(
+        description: "Fisiologia humana",
+        image: ESTOMAGO_PHYSIOLOGY_IMG,
+        specificContentsModel: humanPhysiologySpecificContents),
+    DataModel(
+        description: "Genética",
+        image: DNA_GENETIC_IMG,
+        specificContentsModel: geneticsSpecificContents),
+    DataModel(
+        description: "Classificação dos seres vivos",
+        image: TREE_PHILOGENETIC_CLASSIFICATION_IMG,
+        specificContentsModel: classificationOfLivingBeingsSpecificContents),
+    DataModel(
+        description: "Microbiologia",
+        image: BACTERIA_MICROBIOLOGY_IMG,
+        specificContentsModel: microbiologySpecificContents),
+    DataModel(
+        description: "Botânica",
+        image: BOTONICA_SHEET_IMG,
+        specificContentsModel: botanySpecificContents),
+    DataModel(
+        description: "Zoologia",
+        image: SPIDER_ZOOLOGY_IMG,
+        specificContentsModel: zoologySpecificContents),
   ];
 }

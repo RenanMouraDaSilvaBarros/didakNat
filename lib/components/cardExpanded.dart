@@ -4,8 +4,9 @@ class CardExpanded extends StatelessWidget {
   final image;
   final onTap;
   final color;
+  final description;
 
-  const CardExpanded({Key key, this.image, this.onTap, this.color})
+  const CardExpanded({Key key, this.image, this.onTap, this.color, this.description})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -15,9 +16,9 @@ class CardExpanded extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: AspectRatio(
-        aspectRatio: 2.5,
+        aspectRatio: 2.9,
         child: Material(
-          color: Colors.red,
+          color: Colors.green ,
           borderRadius: BorderRadius.circular(20),
           elevation: 10,
           child: Container(
@@ -28,8 +29,12 @@ class CardExpanded extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Expanded(child: FlutterLogo()),
+                  Expanded(child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical:10.0),
+                    child: Image.asset(image),
+                  )),
                   Container(
+                    height: 20,
                     decoration: BoxDecoration(
                        color: Colors.white,
                         borderRadius: BorderRadius.only(
@@ -39,7 +44,7 @@ class CardExpanded extends StatelessWidget {
                    
                     child: Center(child: Padding(
                       padding: EdgeInsets.all(0),
-                      child: Text("fsd fsdfs sfdddsf fds dfgds fdfd dsfdsf fdfsd"))),
+                      child: Text(description))),
                   )
                 ],
               ),

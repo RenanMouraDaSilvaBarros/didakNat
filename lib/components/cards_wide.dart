@@ -7,10 +7,8 @@ class CardWide extends StatelessWidget {
   final String description;
   final String rota;
 
-
-
   const CardWide(
-      {Key key, this.image, this.color,this.rota, this.description, this.args})
+      {Key key, this.image, this.color, this.rota, this.description, this.args})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -18,13 +16,14 @@ class CardWide extends StatelessWidget {
     final paddingIcon = MediaQuery.of(context).size.width * 0.03;
 
     return AspectRatio(
-      aspectRatio: 3.8,
+      aspectRatio: 3.5,
       child: Container(
+        margin: EdgeInsets.symmetric(vertical: 5),
         padding: EdgeInsets.symmetric(horizontal: 10),
         color: Colors.transparent,
         child: InkWell(
-          onTap: (){
-            
+          onTap: () {
+            Navigator.pushNamed(context, rota, arguments: args);
           },
           child: Material(
             borderRadius: BorderRadius.only(
@@ -40,16 +39,15 @@ class CardWide extends StatelessWidget {
                     aspectRatio: 1,
                     child: Container(
                       decoration: BoxDecoration(
-                          color: color ?? Colors.red,
+                          color: color ?? Colors.teal,
                           borderRadius: BorderRadius.only(
                               topRight: Radius.circular(20),
                               bottomRight: Radius.circular(20),
                               bottomLeft: Radius.circular(20),
                               topLeft: Radius.circular(20))),
-                      child: Image.asset(image??"assets/biologia.png"),
-                      padding: EdgeInsets.only(top: 9, bottom: 5),
+                      child: image != null ? Image.asset(image) : Container(),
+                      padding: EdgeInsets.all(15),
                     ),
-
                   ),
                   Expanded(
                     child: Container(

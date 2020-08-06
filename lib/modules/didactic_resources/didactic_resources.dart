@@ -5,18 +5,18 @@ import 'package:didak_nat/components/cards_wide.dart';
 import 'package:didak_nat/models/dataModel.dart';
 import 'package:flutter/material.dart';
 
-class GeneralContent extends StatefulWidget {
+class DidacticResources extends StatefulWidget {
   final List <DataModel> args;
   
 
-  const GeneralContent({Key key, this.args}) : super(key: key);
+  const DidacticResources({Key key, this.args}) : super(key: key);
   @override
-  _GeneralContentState createState() => _GeneralContentState();
+  _DidacticResourcesState createState() => _DidacticResourcesState();
 }
 
-class _GeneralContentState extends State<GeneralContent> {
-  
-  Widget createList(List<DataModel> array) {
+class _DidacticResourcesState extends State<DidacticResources> {
+   //use 'controller' variable to access controller
+  Widget createList(List array) {
     return Flexible(
       child: ListView.builder(
           itemCount: array.length,
@@ -25,8 +25,7 @@ class _GeneralContentState extends State<GeneralContent> {
               image: array[index].image,
               color:array[0].color ,
               description: array[index].description,
-              rota: "Conteúdos Específicos",
-              args: array[index].specificContentsModel,
+              //rota: "conteudos gerais",
             );
           }),
     );
@@ -37,7 +36,7 @@ class _GeneralContentState extends State<GeneralContent> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.teal,
-        title: Text("Conteúdos Gerais"),
+        title: Text("conteúdos específicos"),
       ),
       body: Column(
         children: <Widget>[createList(widget.args)],

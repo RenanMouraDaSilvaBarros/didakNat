@@ -10,35 +10,34 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   final List cardList = [
-  Container(
-    child: Center(
-        child: Text("O que é o Didaknat?",
-            style: TextStyle(
-                fontSize: 25,
-                color: Colors.white,
-                fontStyle: FontStyle.italic))),
-  ),
-  Container(
-    padding: EdgeInsets.symmetric(horizontal: 20),
-    child: Center(
-        child: Text("Como os professores devem lidar com as aulas remotas?",
-            style: TextStyle(
-                fontSize: 25,
-                color: Colors.white,
-                fontStyle: FontStyle.italic))),
-  ),
-  Container(
-    padding: EdgeInsets.symmetric(horizontal: 20),
-    child: Center(
-        child: Text("Isaias e carequinha se amam",
-            style: TextStyle(
-                fontSize: 25,
-                color: Colors.white,
-                fontStyle: FontStyle.italic))),
-  ),
-];
+    Container(
+      child: Center(
+          child: Text("O que é o Didaknat?",
+              style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.white,
+                  fontStyle: FontStyle.italic))),
+    ),
+    Container(
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      child: Center(
+          child: Text("Como os professores devem lidar com as aulas remotas?",
+              style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.white,
+                  fontStyle: FontStyle.italic))),
+    ),
+    Container(
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      child: Center(
+          child: Text("Isaias e carequinha se amam",
+              style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.white,
+                  fontStyle: FontStyle.italic))),
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -86,24 +85,22 @@ class _HomeScreenState extends State<HomeScreen> {
             image: BIOLOGY_IMG,
             color: Colors.green,
             description: "Biologia",
-            rota: "conteudos gerais",
+            rota: "Conteúdos Gerais",
             args: DataSimulador.biology,
           ),
           CardWide(
             image: CHEMISTRY_IMG,
             color: Colors.redAccent,
             description: "Química",
-            rota: "conteudos gerais",
+            rota: "Conteúdos Gerais",
             args: DataSimulador.biology,
           ),
           CardWide(
             image: PHYSICS_IMG,
             color: Colors.lightBlueAccent,
             description: "Física",
-            rota: "conteudos gerais",
-            args: {
-              DataSimulador.biology,
-            },
+            rota: "Conteúdos Gerais",
+            args: DataSimulador.biology,
           ),
           SizedBox(
             height: 30,
@@ -111,6 +108,5 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
     );
- 
   }
 }
