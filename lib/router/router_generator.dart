@@ -1,10 +1,11 @@
+import 'package:didak_nat/modules/general_content/general_content_screen.dart';
 import 'package:flutter/material.dart';
 
 class RouterGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     final args = settings.arguments;
     final Map<String, dynamic> routes = {
-      // "name": MaterialPageRoute(builder: (_) => Tela(args)),
+       "conteudos gerais": MaterialPageRoute(builder: (_) => GeneralContent(args: args,)),
     };
     if (routes.containsKey(settings.name)) {
       return routes[settings.name];
