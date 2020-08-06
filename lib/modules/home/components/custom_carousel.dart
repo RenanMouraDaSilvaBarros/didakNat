@@ -2,9 +2,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
-class Carousel extends StatefulWidget {
+class CustomCarousel extends StatefulWidget {
   /// Creates slide show of Images and [Widget] with animation for sliding.
-  Carousel({
+  CustomCarousel({
     @required this.items,
     this.pagerSize,
     this.passiveIndicator,
@@ -43,7 +43,7 @@ class Carousel extends StatefulWidget {
   /// The slider pagination's passive color.
   final Color passiveIndicator;
 
-  /// The [Carousel] shows pagination on state true.
+  /// The [CustomCarousel] shows pagination on state true.
   final bool pagination;
 
   /// The widgets to be shown as sliders.
@@ -58,7 +58,7 @@ class Carousel extends StatefulWidget {
   /// The fraction of the viewport that each page should occupy. Defaults to 0.8, which means each page fills 80% of the slide.
   final num viewportFraction;
 
-  /// The initial page to show when first creating the [Carousel]. Defaults to 0.
+  /// The initial page to show when first creating the [CustomCarousel]. Defaults to 0.
   final num initialPage;
 
   /// The actual index of the [PageView].
@@ -86,7 +86,7 @@ class Carousel extends StatefulWidget {
   final Duration pauseAutoPlayOnTouch;
 
   /// Determines if current page should be larger then the side images,
-  /// creating a feeling of depth in the carousel. Defaults to false.
+  /// creating a feeling of depth in the Customcarousel. Defaults to false.
   /// works only if viewportFraction set to 1.0.
   final bool enlargeMainPage;
 
@@ -98,7 +98,7 @@ class Carousel extends StatefulWidget {
 
 //  int onPageIndex;
 
-  /// How the carousel should respond to user input.
+  /// How the Customcarousel should respond to user input.
   ///
   /// For example, determines how the items continues to animate after the
   /// user stops dragging the page view.
@@ -113,21 +113,21 @@ class Carousel extends StatefulWidget {
   /// and can be used to control the [PageView] it is passed to.
   final PageController pageController;
 
-  /// Animates the controlled [Carousel] to the next page.
+  /// Animates the controlled [CustomCarousel] to the next page.
   ///
   /// The animation lasts for the given duration and follows the given curve.
   /// The returned [Future] resolves when the animation completes.
   Future<void> nextPage({Duration duration, Curve curve}) =>
       pageController.nextPage(duration: duration, curve: curve);
 
-  /// Animates the controlled [Carousel] to the previous page.
+  /// Animates the controlled [CustomCarousel] to the previous page.
   ///
   /// The animation lasts for the given duration and follows the given curve.
   /// The returned [Future] resolves when the animation completes.
   Future<void> previousPage({Duration duration, Curve curve}) =>
       pageController.previousPage(duration: duration, curve: curve);
 
-  /// Changes which page is displayed in the controlled [Carousel].
+  /// Changes which page is displayed in the controlled [CustomCarousel].
   ///
   /// Jumps the page position from its current value to the given value,
   /// without animation, and without checking if the new value is in range.
@@ -138,7 +138,7 @@ class Carousel extends StatefulWidget {
         .jumpToPage(pageController.page.toInt() + page - index);
   }
 
-  /// Animates the controlled [Carousel] from the current page to the given page.
+  /// Animates the controlled [CustomCarousel] from the current page to the given page.
   ///
   /// The animation lasts for the given duration and follows the given curve.
   /// The returned [Future] resolves when the animation completes.
@@ -162,10 +162,10 @@ class Carousel extends StatefulWidget {
   }
 
   @override
-  _CarouselState createState() => _CarouselState();
+  _CustomCarouselState createState() => _CustomCarouselState();
 }
 
-class _CarouselState extends State<Carousel> with TickerProviderStateMixin {
+class _CustomCarouselState extends State<CustomCarousel> with TickerProviderStateMixin {
   Timer timer;
 //  int _current = 0;
 
@@ -340,7 +340,7 @@ class _CarouselState extends State<Carousel> with TickerProviderStateMixin {
 /// Takes a [position] from collection Foo, a [base] from where Foo's index originated
 /// and the [length] of a second collection Baa, for which the correlating index is sought.
 ///
-/// For example; We have a Carousel of 10000(simulating infinity) but only 6 images.
+/// For example; We have a CustomCarousel of 10000(simulating infinity) but only 6 images.
 /// We need to repeat the images to give the illusion of a never ending stream.
 /// By calling _getRealIndex with position and base we get an offset.
 /// This offset modulo our length, 6, will return a number between 0 and 5, which represent the image

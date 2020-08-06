@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  Firestore.instance.collection("q").document("q").setData({"wdw":"dwed"});
   runApp(MyApp());
 }
 
