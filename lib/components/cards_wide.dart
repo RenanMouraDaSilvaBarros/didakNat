@@ -46,7 +46,7 @@ class CardWide extends StatelessWidget {
                               bottomRight: Radius.circular(20),
                               bottomLeft: Radius.circular(20),
                               topLeft: Radius.circular(20))),
-                      child: Image.asset(image),
+                      child: Image.asset(image??"assets/biologia.png"),
                       padding: EdgeInsets.only(top: 9, bottom: 5),
                     ),
 
