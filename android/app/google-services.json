@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "287250763254",
+    "firebase_url": "https://didaknat-7681b.firebaseio.com",
+    "project_id": "didaknat-7681b",
+    "storage_bucket": "didaknat-7681b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287250763254:android:c613a2eb60f60acc5a8bd7",
+        "android_client_info": {
+          "package_name": "com.example.didak_nat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287250763254-26po5qmoab5anrvd8uu6rfm6fbs0dqce.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.didak_nat",
+            "certificate_hash": "c8878be82ca7059ae65680e52c9a905f275bb8e2"
+          }
+        },
+        {
+          "client_id": "287250763254-j0b0udq00paui5mc6fm8cr7alhm96una.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXR62ybuXM8wnaI4SIhdw_7HHrVmBKq2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287250763254-j0b0udq00paui5mc6fm8cr7alhm96una.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
