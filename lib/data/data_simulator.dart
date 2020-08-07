@@ -1,6 +1,7 @@
 import 'package:didak_nat/models/dataModel.dart';
 import 'package:didak_nat/modules/specific_content/models/specific_contents_model.dart';
 import 'package:didak_nat/modules/specific_content/models/specific_contents_model.dart';
+import 'package:didak_nat/utils/MyColors.dart';
 import 'package:flutter/material.dart';
 import '../modules/general_content/image_path/imagePath.dart';
 import '../modules/home/image_path/imagePath.dart';
@@ -11,7 +12,8 @@ class DataSimulador {
 //CONTEÚDOS GERAIS
 
   static List<SpecificContentsModel> originOfLifeSpecificContents = [
-    SpecificContentsModel(description: "Abiogênese x Biogênese"),
+    SpecificContentsModel(
+        description: "Abiogênese x Biogênese", color: Colors.green),
     SpecificContentsModel(description: "Hipóteses sobre a origem da vida"),
     SpecificContentsModel(description: "Evolução do metabolismo energético"),
   ];
@@ -203,7 +205,8 @@ class DataSimulador {
     ),
   ];
 
-  static List<SpecificContentsModel> classificationOfLivingBeingsSpecificContents = [
+  static List<SpecificContentsModel>
+      classificationOfLivingBeingsSpecificContents = [
     SpecificContentsModel(
       description: "Classificação de Lineu",
     ),
@@ -277,15 +280,13 @@ class DataSimulador {
 
 //RECURSOS (mapa conceitual)
   static List<String> recursos = [
-    "Atividades lúdicas",
-    "Experimentos",
-    "Atividades investigativas",
-    "Vídeos",
-    "Aplicativos",
-    "Softwares",
-    "Textos de divulgação científica",
-    "Questões",
-    "Outros"
+    "Atividades lúdicas", //texto link
+    "Experimentos", //texto
+    "Atividades investigativas", //texto
+    "Vídeos", //link e texto
+    "Apps", //link e texto
+    "Programas de computador", //link e texto
+    "Questões", //texto
   ];
 
 //QUÍMICA
@@ -330,7 +331,7 @@ class DataSimulador {
     DataModel(
         description: "Origem da via",
         image: MOLECULE_ORIGIN_IMG,
-        color: Colors.green,
+        color: MyColors.colorTheme,
         specificContentsModel: originOfLifeSpecificContents),
     DataModel(
         description: "Evolução",
@@ -381,4 +382,5 @@ class DataSimulador {
         image: SPIDER_ZOOLOGY_IMG,
         specificContentsModel: zoologySpecificContents),
   ];
+
 }

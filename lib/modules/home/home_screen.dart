@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Container(
       padding: EdgeInsets.symmetric(horizontal: 20),
       child: Center(
-          child: Text("Isaias e carequinha se amam",
+          child: Text("o que é o Yuri?",
               style: TextStyle(
                   fontSize: 25,
                   color: Colors.white,

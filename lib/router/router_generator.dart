@@ -1,3 +1,4 @@
+import 'package:didak_nat/modules/didactic_resources/didactic_resources.dart';
 import 'package:didak_nat/modules/general_content/general_content_screen.dart';
 import 'package:didak_nat/modules/specific_content/specifc_content.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,7 @@ class RouterGenerator {
     final Map<String, dynamic> routes = {
        "Conteúdos Gerais": MaterialPageRoute(builder: (_) => GeneralContent(args: args,)),
         "Conteúdos Específicos":MaterialPageRoute(builder: (_) => SpecifcContent(args: args)),
-        "Recursos Didáticos":MaterialPageRoute(builder: (_) => SpecifcContent(args: args)),
+        "Recursos Didáticos":MaterialPageRoute(builder: (_) => DidacticResources(args: args)),
     };
     if (routes.containsKey(settings.name)) {
       return routes[settings.name];

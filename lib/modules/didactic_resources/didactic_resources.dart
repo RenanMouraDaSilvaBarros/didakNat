@@ -2,7 +2,9 @@
 
 import 'package:didak_nat/components/cardExpanded.dart';
 import 'package:didak_nat/components/cards_wide.dart';
+import 'package:didak_nat/data/data_simulator.dart';
 import 'package:didak_nat/models/dataModel.dart';
+import 'package:didak_nat/utils/MyColors.dart';
 import 'package:flutter/material.dart';
 
 class DidacticResources extends StatefulWidget {
@@ -16,15 +18,15 @@ class DidacticResources extends StatefulWidget {
 
 class _DidacticResourcesState extends State<DidacticResources> {
    //use 'controller' variable to access controller
-  Widget createList(List array) {
+  Widget createList(List<String> array) {
     return Flexible(
       child: ListView.builder(
           itemCount: array.length,
           itemBuilder: (BuildContext context, int index) {
             return CardWide(
-              image: array[index].image,
-              color:array[0].color ,
-              description: array[index].description,
+              //image: array[index].image,
+              //color:array[0].color ,
+              description: array[index],
               //rota: "conteudos gerais",
             );
           }),
@@ -35,11 +37,16 @@ class _DidacticResourcesState extends State<DidacticResources> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.teal,
-        title: Text("conteúdos específicos"),
+        centerTitle: true,
+        backgroundColor: MyColors.colorTheme,
+        title: Text("Recursos"),
+         leading: IconButton(
+              icon: Icon(Icons.arrow_back_ios),
+              onPressed: () => Navigator.pop(context)),
       ),
+      backgroundColor: MyColors.backgroundColor,
       body: Column(
-        children: <Widget>[createList(widget.args)],
+        children: <Widget>[createList(DataSimulador.recursos)],
       ),
     );
   }
