@@ -31,7 +31,7 @@ class CardWide extends StatelessWidget {
                 bottomRight: Radius.circular(19),
                 bottomLeft: Radius.circular(19),
                 topLeft: Radius.circular(19)),
-            elevation: 8,
+            elevation: 3,
             child: Container(
               child: Row(
                 children: <Widget>[

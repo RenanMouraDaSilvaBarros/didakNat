@@ -58,6 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           CustomCarousel(
             activeIndicator: Colors.red,
@@ -91,13 +92,9 @@ class _HomeScreenState extends State<HomeScreen> {
             //   });
             // },
           ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 10.0),
-              child: Column(
-                children: content,
-              ),
-            ),
+          ListView(
+            shrinkWrap: true,
+            children: content,
           ),
         ],
       ),

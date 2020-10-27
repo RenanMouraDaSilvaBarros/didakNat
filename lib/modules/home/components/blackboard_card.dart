@@ -11,7 +11,7 @@ class BlackboardCard extends StatelessWidget {
          Navigator.pushNamed(context, rota);
       },
       child: Container(
-        color: Colors.green,
+        color: Colors.teal,
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Center(
             child: Text(title,
