@@ -7,6 +7,8 @@ import 'package:didak_nat/models/dataModel.dart';
 import 'package:didak_nat/utils/MyColors.dart';
 import 'package:flutter/material.dart';
 
+import 'models/didactic_resources_model.dart';
+
 class DidacticResources extends StatefulWidget {
   final List <DataModel> args;
   
@@ -18,16 +20,17 @@ class DidacticResources extends StatefulWidget {
 
 class _DidacticResourcesState extends State<DidacticResources> {
    //use 'controller' variable to access controller
-  Widget createList(List<String> array) {
+  Widget createList(List<DidacticResourcesModel> array) {
     return Flexible(
       child: ListView.builder(
           itemCount: array.length,
           itemBuilder: (BuildContext context, int index) {
             return CardWide(
-              //image: array[index].image,
+              image: array[index].image,
               //color:array[0].color ,
-              description: array[index],
-              //rota: "conteudos gerais",
+              
+              description: array[index].name,
+              rota: "",
             );
           }),
     );

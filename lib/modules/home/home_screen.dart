@@ -12,6 +12,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final List cardList = [
     Container(
+      color: Colors.green,
       child: Center(
           child: Text("O que é o Didaknat?",
               style: TextStyle(
@@ -20,22 +21,51 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontStyle: FontStyle.italic))),
     ),
     Container(
+      color: Colors.green,
       padding: EdgeInsets.symmetric(horizontal: 20),
       child: Center(
-          child: Text("Como os professores devem lidar com as aulas remotas?",
+          child: Text("Dicas para uma boa aula",
               style: TextStyle(
                   fontSize: 25,
                   color: Colors.white,
                   fontStyle: FontStyle.italic))),
     ),
     Container(
+      color: Colors.green,
       padding: EdgeInsets.symmetric(horizontal: 20),
       child: Center(
-          child: Text("o que é o Yuri?",
+          child: Text("Saúde do professor",
               style: TextStyle(
                   fontSize: 25,
                   color: Colors.white,
                   fontStyle: FontStyle.italic))),
+    ),
+  ];
+
+  List<Widget> content = [
+    CardWide(
+      image: BIOLOGY_IMG,
+      color: Colors.green,
+      description: "Biologia",
+      rota: "Conteúdos Gerais",
+      args: DataSimulador.biology,
+    ),
+    CardWide(
+      image: CHEMISTRY_IMG,
+      color: Colors.redAccent,
+      description: "Química",
+      rota: "Conteúdos Gerais",
+      args: DataSimulador.biology,
+    ),
+    CardWide(
+      image: PHYSICS_IMG,
+      color: Colors.lightBlueAccent,
+      description: "Física",
+      rota: "Conteúdos Gerais",
+      args: DataSimulador.biology,
+    ),
+    SizedBox(
+      height: 30,
     ),
   ];
 
@@ -44,13 +74,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          SizedBox(
-            height: 30,
-          ),
           CustomCarousel(
-            activeIndicator: Colors.redAccent,
+            activeIndicator: Colors.red,
             pagination: true,
             aspectRatio: 1.6,
             viewportFraction: 1.0,
@@ -63,11 +89,11 @@ class _HomeScreenState extends State<HomeScreen> {
             items: cardList.map(
               (i) {
                 return Container(
-                  margin: EdgeInsets.all(8.0),
+                  margin: EdgeInsets.only(right: 8.0, left: 8.0, top: 35),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(15)),
-                      border: Border.all(width: 5, color: Colors.white60),
-                      color: Colors.teal),
+                      border: Border.all(width: 5, color: Colors.white),
+                      color: Colors.white),
                   child: ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
                     child: i,
@@ -81,29 +107,13 @@ class _HomeScreenState extends State<HomeScreen> {
             //   });
             // },
           ),
-          CardWide(
-            image: BIOLOGY_IMG,
-            color: Colors.green,
-            description: "Biologia",
-            rota: "Conteúdos Gerais",
-            args: DataSimulador.biology,
-          ),
-          CardWide(
-            image: CHEMISTRY_IMG,
-            color: Colors.redAccent,
-            description: "Química",
-            rota: "Conteúdos Gerais",
-            args: DataSimulador.biology,
-          ),
-          CardWide(
-            image: PHYSICS_IMG,
-            color: Colors.lightBlueAccent,
-            description: "Física",
-            rota: "Conteúdos Gerais",
-            args: DataSimulador.biology,
-          ),
-          SizedBox(
-            height: 30,
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 10.0),
+              child: Column(
+                children: content,
+              ),
+            ),
           ),
         ],
       ),

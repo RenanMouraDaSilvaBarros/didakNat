@@ -23,7 +23,7 @@ class CardWide extends StatelessWidget {
         color: Colors.transparent,
         child: InkWell(
           onTap: () {
-            Navigator.pushNamed(context, rota, arguments: args);
+            if (rota != "") Navigator.pushNamed(context, rota, arguments: args);
           },
           child: Material(
             borderRadius: BorderRadius.only(

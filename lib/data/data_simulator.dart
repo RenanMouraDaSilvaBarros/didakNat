@@ -1,8 +1,10 @@
 import 'package:didak_nat/models/dataModel.dart';
+import 'package:didak_nat/modules/didactic_resources/image_path/imagePath.dart';
 import 'package:didak_nat/modules/specific_content/models/specific_contents_model.dart';
 import 'package:didak_nat/modules/specific_content/models/specific_contents_model.dart';
 import 'package:didak_nat/utils/MyColors.dart';
 import 'package:flutter/material.dart';
+import '../modules/didactic_resources/models/didactic_resources_model.dart';
 import '../modules/general_content/image_path/imagePath.dart';
 import '../modules/home/image_path/imagePath.dart';
 
@@ -279,14 +281,57 @@ class DataSimulador {
   ];
 
 //RECURSOS (mapa conceitual)
-  static List<String> recursos = [
-    "Atividades lúdicas", //texto link
-    "Experimentos", //texto
-    "Atividades investigativas", //texto
-    "Vídeos", //link e texto
-    "Apps", //link e texto
-    "Programas de computador", //link e texto
-    "Questões", //texto
+  // static List<String> recursos = [
+  //   "Atividades lúdicas", //texto link
+  //   "Experimentos", //texto
+  //   "Atividades investigativas", //texto
+  //   "Vídeos", //link e texto
+  //   "Apps mobile", //link e texto
+  //   "Programas de computador", //link e texto
+  //   "Questões", //texto
+  // ];
+
+  static List<DidacticResourcesModel> recursos = [
+    DidacticResourcesModel(
+      name:"Atividades lúdicas", 
+      image: PLAYFUL_ACTIVITIES_IMG,
+      rota: ""
+
+    ),
+    DidacticResourcesModel(
+      name:"Experimentos", 
+      image: EXPERIMENTS_IMG,
+      rota: ""
+
+    ),
+    DidacticResourcesModel(
+      name:"Atividades investigativas", 
+      image: INVESTIGATIVE_ACTIVITIES_IMG,
+      rota: ""
+
+    ),
+    DidacticResourcesModel(
+      name:"Vídeos", 
+      image: VIDEOS_IMG,
+      rota: ""
+
+    ),
+    DidacticResourcesModel(
+      name:"Apps mobile", 
+      image: MOBILE_APPS_IMG,
+      rota: ""
+    ),
+     DidacticResourcesModel(
+      name:"Apps desktop", 
+      image: DESKTOP_APPLICATIONS_IMG,
+      rota: ""
+    ),
+     DidacticResourcesModel(
+      name:"Questões", 
+      image: QUESTIONS_IMG,
+      rota: ""
+    )
+
   ];
 
 //QUÍMICA
@@ -329,7 +374,7 @@ class DataSimulador {
 
   static List<DataModel> biology = [
     DataModel(
-        description: "Origem da via",
+        description: "Origem da vida",
         image: MOLECULE_ORIGIN_IMG,
         color: MyColors.colorTheme,
         specificContentsModel: originOfLifeSpecificContents),
