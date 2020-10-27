@@ -293,45 +293,21 @@ class DataSimulador {
 
   static List<DidacticResourcesModel> recursos = [
     DidacticResourcesModel(
-      name:"Atividades lúdicas", 
-      image: PLAYFUL_ACTIVITIES_IMG,
-      rota: ""
-
-    ),
+        name: "Mapa conceitual", image: CONCEITUAL_MAP_IMG, rota: "development"),
     DidacticResourcesModel(
-      name:"Experimentos", 
-      image: EXPERIMENTS_IMG,
-      rota: ""
-
-    ),
+        name: "Atividades lúdicas", image: PLAYFUL_ACTIVITIES_IMG, rota: "development"),
     DidacticResourcesModel(
-      name:"Atividades investigativas", 
-      image: INVESTIGATIVE_ACTIVITIES_IMG,
-      rota: ""
-
-    ),
+        name: "Experimentos", image: EXPERIMENTS_IMG, rota: "development"),
     DidacticResourcesModel(
-      name:"Vídeos", 
-      image: VIDEOS_IMG,
-      rota: ""
-
-    ),
+        name: "Atividades investigativas",
+        image: INVESTIGATIVE_ACTIVITIES_IMG,
+        rota: "development"),
+    DidacticResourcesModel(name: "Vídeos", image: VIDEOS_IMG, rota: "development"),
     DidacticResourcesModel(
-      name:"Apps móveis", 
-      image: MOBILE_APPS_IMG,
-      rota: ""
-    ),
-     DidacticResourcesModel(
-      name:"Apps desktop", 
-      image: DESKTOP_APPLICATIONS_IMG,
-      rota: ""
-    ),
-     DidacticResourcesModel(
-      name:"Questões", 
-      image: QUESTIONS_IMG,
-      rota: ""
-    )
-
+        name: "Apps móveis", image: MOBILE_APPS_IMG, rota: "development"),
+    DidacticResourcesModel(
+        name: "Apps desktop", image: DESKTOP_APPLICATIONS_IMG, rota: "development"),
+    DidacticResourcesModel(name: "Questões", image: QUESTIONS_IMG, rota: "development")
   ];
 
 //QUÍMICA
@@ -427,5 +403,4 @@ class DataSimulador {
         image: SPIDER_ZOOLOGY_IMG,
         specificContentsModel: zoologySpecificContents),
   ];
-
 }

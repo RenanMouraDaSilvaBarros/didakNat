@@ -5,3 +5,4 @@ const String VIDEOS_IMG = "assets/video.png";
 const String MOBILE_APPS_IMG = "assets/aplicativos_moveis.png";
 const String DESKTOP_APPLICATIONS_IMG = "assets/softwares.png";
 const String QUESTIONS_IMG = "assets/pagina_texto.png";
+const String CONCEITUAL_MAP_IMG = "assets/mapa_conceitual.png";

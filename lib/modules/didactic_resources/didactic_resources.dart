@@ -30,7 +30,7 @@ class _DidacticResourcesState extends State<DidacticResources> {
               //color:array[0].color ,
               
               description: array[index].name,
-              rota: "",
+              rota: array[index].rota,
             );
           }),
     );

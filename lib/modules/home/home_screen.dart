@@ -1,4 +1,5 @@
 import 'package:didak_nat/data/data_simulator.dart';
+import 'package:didak_nat/modules/home/components/blackboard_card.dart';
 import 'package:didak_nat/modules/home/components/custom_carousel.dart';
 import 'package:flutter/material.dart';
 import '../../components/cards_wide.dart';
@@ -11,34 +12,17 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final List cardList = [
-    Container(
-      color: Colors.green,
-      child: Center(
-          child: Text("O que é o Didaknat?",
-              style: TextStyle(
-                  fontSize: 25,
-                  color: Colors.white,
-                  fontStyle: FontStyle.italic))),
+    BlackboardCard(
+      title: "O que é o DidakNat",
+      rota: "development",
     ),
-    Container(
-      color: Colors.green,
-      padding: EdgeInsets.symmetric(horizontal: 20),
-      child: Center(
-          child: Text("Dicas para uma boa aula",
-              style: TextStyle(
-                  fontSize: 25,
-                  color: Colors.white,
-                  fontStyle: FontStyle.italic))),
+    BlackboardCard(
+      title: "Dicas para uma boa aula",
+      rota: "development",
     ),
-    Container(
-      color: Colors.green,
-      padding: EdgeInsets.symmetric(horizontal: 20),
-      child: Center(
-          child: Text("Saúde do professor",
-              style: TextStyle(
-                  fontSize: 25,
-                  color: Colors.white,
-                  fontStyle: FontStyle.italic))),
+    BlackboardCard(
+      title: "Saúde do professor",
+      rota: "development",
     ),
   ];
 
@@ -54,14 +38,14 @@ class _HomeScreenState extends State<HomeScreen> {
       image: CHEMISTRY_IMG,
       color: Colors.redAccent,
       description: "Química",
-      rota: "Conteúdos Gerais",
+      rota: "development",
       args: DataSimulador.biology,
     ),
     CardWide(
       image: PHYSICS_IMG,
       color: Colors.lightBlueAccent,
       description: "Física",
-      rota: "Conteúdos Gerais",
+      rota: "development",
       args: DataSimulador.biology,
     ),
     SizedBox(

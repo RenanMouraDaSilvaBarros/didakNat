@@ -29,7 +29,7 @@ class CardText extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 10),
             
             decoration: BoxDecoration(
-              color: Colors.green,
+              color: Colors.lime,
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(19),
                     bottomRight: Radius.circular(19),
