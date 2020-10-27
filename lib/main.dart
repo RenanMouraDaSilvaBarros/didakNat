@@ -10,6 +10,10 @@ void main() {
    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: MyColors.colorTheme,
   ));
+   SystemChrome.setPreferredOrientations([
+        DeviceOrientation.portraitUp,
+        DeviceOrientation.portraitDown,
+      ]);
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
      onGenerateRoute: RouterGenerator.generateRoute,

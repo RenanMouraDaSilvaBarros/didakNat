@@ -317,7 +317,7 @@ class DataSimulador {
 
     ),
     DidacticResourcesModel(
-      name:"Apps mobile", 
+      name:"Apps móveis", 
       image: MOBILE_APPS_IMG,
       rota: ""
     ),
@@ -392,7 +392,7 @@ class DataSimulador {
         specificContentsModel: cytologySpecificContents),
     DataModel(
         description: "Metabolismo energético",
-        image: BIOLOGY_IMG,
+        image: ENERGY_METABOLISM_IMG,
         specificContentsModel: energyMetabolismSpecificContents),
     DataModel(
         description: "Ecologia",

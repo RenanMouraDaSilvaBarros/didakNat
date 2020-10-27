@@ -51,6 +51,8 @@ class _DidacticResourcesState extends State<DidacticResources> {
       body: Column(
         children: <Widget>[createList(DataSimulador.recursos)],
       ),
+       //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      
     );
   }
 }

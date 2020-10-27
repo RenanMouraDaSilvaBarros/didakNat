@@ -10,5 +10,7 @@ const String HISTOLOGY_FABRIC_CILIOS_IMG = 'assets/histologia_tecido_cilios.png'
 const String BACTERIA_MICROBIOLOGY_IMG = 'assets/microbiologia_bacteria.png';
 const String MOLECULE_ORIGIN_IMG = 'assets/origem_molecula.png';
 const String SPIDER_ZOOLOGY_IMG = 'assets/zoologia_aranha.png';
+const String ENERGY_METABOLISM_IMG = 'assets/metabolismo_energetico.png';
+
 
 
